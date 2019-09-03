@@ -1,0 +1,56 @@
+/* Main */ 
+.pageMain nav {background:rgba(80, 111, 212, 0.97)}
+
+nav .scrollmenu .arrowHome:hover { background-color:rgba(0, 0, 0, 0.11)}
+nav {position:fixed; top:0; width:100%; text-transform:uppercase; z-index:1; opacity:0; transition:all 0.3s}
+nav.active {opacity:1; -webkit-transform: translateZ(0)}
+nav .containerIco {display:inline-block; position:absolute; right:1.3em; top:2.1em; cursor:pointer}
+nav .icoMenu {display:inline-block; width:3.5em; vertical-align:middle}
+nav .icoMenu:hover span {background-color:#fff}
+nav .icoMenu.active:hover span {background-color:#f0f0f1}
+nav .icoMenu.active {height:1.6em; padding-top:1.2em; width:2.8em; margin:-0.5em 0.7em 0 0}
+nav .icoMenu span {height:0.3em; width:2.8em; background:rgba(242,242,242,0.85); display:block; transition:all .2s}
+nav .icoMenu.active span {background-color:#f0f0f1}
+nav .icoMenu span + span {margin-top:0.4em}
+nav .icoMenu.active span + span {margin-top:0}
+nav .icoMenu.active .stick1 {-ms-transform:rotate(45deg); -webkit-transform:rotate(45deg); -moz-transform: rotate(45deg); transform: rotate(45deg)}
+nav .icoMenu.active .stick1 + .stick1 {margin-top:-0.3em;}
+nav .icoMenu.active .stick2 {-ms-transform:rotate(-45deg); -webkit-transform:rotate(-45deg); -moz-transform: rotate(-45deg); transform: rotate(-45deg); margin-top:-0.3em}
+
+.scrollmenu {display:none; position:absolute; top:0; left:0; width:100%}
+.scrollmenu.open {display:block}
+.scrollmenu .arrowHome {display:block; margin:auto; width:1.3em; height:2.2em; padding:1.9em 3.2em; background-image:url(gfx/arrow.svg); background-position:center; background-repeat:no-repeat; cursor:pointer; transition:all 0.3s}
+
+.scrollmenuExpanded {display:none; position:absolute; top:0; left:0; padding:4.3em 0; width:100%}
+.scrollmenuExpanded.open {display:block}
+.scrollmenuExpanded ul {display:inline-block; padding:4.3em}
+.scrollmenuExpanded li {display:inline-block}
+.scrollmenuExpanded li+li {margin-left:5em}
+.scrollmenuExpanded li a {display:inline-block; padding:0 1.3em; border-bottom:0.5em solid transparent; transition: all 0.3s}
+.scrollmenuExpanded li a:hover, main nav .scrollmenuExpanded li a.active {border-bottom:0.5em solid rgba(255, 255, 255, 0.3)}
+.scrollmenuExpanded li a span {font:4.8em "Titillium Web", sans-serif; color:rgba(255, 255, 255, 0.85); font-weight:700; transition: all 0.3s}
+.scrollmenuExpanded li a:hover span {color:rgba(255, 255, 255, 0.95); transition: all 0.3s}
+
+/*screen*/
+@media screen and (max-width:1024px) {
+	.scrollmenuExpanded {padding:0; height:100%}
+	.scrollmenuExpanded::before {content:""; display:inline-block; height:100%; vertical-align:middle}
+	.scrollmenuExpanded ul {display:inline-block; padding:0; width:99%; vertical-align:middle}
+	.scrollmenuExpanded ul li {width:100%}
+	.scrollmenuExpanded li+li {margin-left:0; margin-top:13.1em}
+	.scrollmenuExpanded li a span {font-size:6em}
+}
+
+@media screen and (max-width:767px) {
+	nav .containerIco {top:1.3em; right:0.2em}
+	nav .icoMenu {width:3.5em}
+	nav .icoMenu.active {height:1.6em; padding-top:1.2em; width:2.8em; margin:-0.5em 0.7em 0 0}
+	nav .icoMenu span {height:0.3em; width:2.4em}
+	nav .icoMenu span + span {margin-top:0.3em}
+	
+	.scrollmenu .arrowHome {width:0.9em; height:1.5em; padding:1.3em 2.3em; background-image:url(gfx/arrow.svg); background-size:20%;}
+	.scrollmenuExpanded li+li {margin-left:0; margin-top:1.7em}
+	.scrollmenuExpanded li a {padding:0 1em; border-bottom:0.4em solid transparent}
+	.scrollmenuExpanded li a:hover, main nav .scrollmenuExpanded li a.active {border-bottom:0.4em solid rgba(255, 255, 255, 0.3)}
+	.scrollmenuExpanded li a span {font-size:4.8em}
+}

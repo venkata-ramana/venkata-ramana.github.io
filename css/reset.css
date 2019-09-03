@@ -1,0 +1,28 @@
+/*RESET*/
+html {color:#000; background:#fff}
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, main {display:block; margin:0; padding:0}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, address {margin:0; padding:0}
+table {border-collapse:collapse; border-spacing:0; font-size:inherit}
+fieldset, img {border:0}
+address, caption, cite, code, dfn, em, strong, th, var {font-style:normal; font-weight:normal}
+menu, ul, li {list-style:none}
+caption, th {text-align:left}
+h1, h2, h3, h4, h5, h6 {font-size:100%; font-weight:normal}
+q:before, q:after {content:''}
+abbr, acronym {border:0; font-variant:normal}
+sup {vertical-align:text-top}
+sub {vertical-align:text-bottom}
+input, textarea, select {font-family:inherit; font-size:inherit; font-weight:inherit; outline:none}
+legend {color:#000}
+pre, code, kbd, samp, tt {font-family:monospace; line-height:100%}
+em {font-style:italic}
+strong {font-weight:bold}
+a, a:hover, a:active, a:focus, a:visited, button, [role="button"], [type="button"], [type="submit"] {outline:none; text-decoration:none; cursor:pointer}
+*:not(input):not(textarea) {-webkit-touch-callout:none !important; -webkit-tap-highlight-color:rgba(0,0,0,0); -moz-touch-callout:none !important; -moz-tap-highlight-color:rgba(0,0,0,0); -ms-touch-callout:none !important; -ms-tap-highlight-color:rgba(0,0,0,0)}
+::-moz-selection{background: #5574d5; color: #fff} 
+::webkit-selection{background: #5574d5; color: #fff} 
+::selection{background: #5574d5; color: #fff}
+
+@media (pointer:coarse) {
+	* {cursor:none !important}
+}

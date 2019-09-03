@@ -1,0 +1,359 @@
+﻿/*PRE*/
+input, select, textarea, table {font:inherit; color:inherit; vertical-align:middle; outline:none; text-align:left; line-height:normal}
+input::-webkit-input-placeholder {color:#8f8f8f}
+a, a:hover {color:inherit; text-decoration:none; cursor:text}
+a[href], [type="submit"], [type="button"], [role="button"] {cursor:pointer !important}
+p {line-height:normal}
+img {vertical-align:middle; width:auto; height:auto; max-width:100%; max-height:100%}
+img[style*='url'] {content:url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'); background:no-repeat 50% 50%; background-size:cover}
+hr {background:none; border:none; border-top:0.1em solid #333; padding:0; margin:5em 0; font-size:0; line-height:0}
+iframe {background:none; border:none; max-width:100%}
+
+h1, h2 {line-height:normal; font-weight:600}
+h1 {line-height:12em}
+h1 .text {font-size:9.6em}
+h2 {margin-bottom:6.4em}
+h2 .text {font-size:7.2em}
+h3 {margin-bottom:1.3em; color:#000}
+h3 .text {font-size:3em}
+
+.clearfix {min-height:1%}
+.clearfix:after {display:block; content:""; font-size:0; line-height:0; height:0; visibility:hidden; clear:both}
+
+/*set default text size and overwrite later, where is needed*/
+.text {display:inline-block; font-size:2.5em}
+
+.border {position:relative; padding-top:2.2em}
+.border::before {content:""; display:block; width:6.8em; height:0.4em; position:absolute; top:-0.5em; left:50%; margin-left:-3.4em; background-color:#506fd4; border-radius:0.3em}
+
+/*FONT*/
+/*@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i|Titillium+Web:400,600,700');*/
+.PTSerif 
+{font-family:"PT Serif", serif}
+.TitilliumWeb,
+.landing menu, .listWork, footer
+{font-family:"Titillium Web", sans-serif}
+
+.landing{
+	background: url("gfx/me.jpg");
+}
+
+/* For width 400px and larger: */
+@media only screen and (min-width: 768px) {
+    .landing{
+		background: url("gfx/me.jpg");
+    	background-size: cover;
+	}
+}
+/*LAYOUT*/
+html {height:100%; background:#f0f0f0}
+body {height:100%; font:10px/1 "PT Serif", serif; color:#323232; text-align:center}
+.wrapper {position:relative; max-width:118em; margin:0 45px}
+.main-wrapper {position:relative; max-width:118em; margin:auto}
+
+/*landing*/
+.landing {width:100%;  transition:height 0.3s}
+.landing .wrapper {height:100%}
+
+.landing h1 {position:absolute; left:9em; right:5em; top:23%; color: #fff;}
+.landing h1 > .text {text-align:left}
+.landing h1 > .text .words {position:relative; display:inline-block; width:0.1em; white-space:nowrap; vertical-align:top}
+.landing h1 > .text .words span {position:absolute; opacity:0; -webkit-transform: translateZ(0); transition:opacity 0.5s}
+.landing h1 > .text .words .active {opacity:1}
+
+.landing h1 strong {position:absolute; width:8.6em; height:10.1em; left:-9em; top:-5.5em; line-height:8.5em; color:#fff; background:url('gfx/hi.svg') no-repeat 50% 50%; background-size:100%}
+.landing h1 strong .text {font-size:3.6em}
+
+menu {position:absolute; -webkit-transform: translateZ(0); left:0; right:0; bottom:21%; font-weight:600; text-transform:uppercase; color:#838398}
+menu li {display:inline-block; padding:0 1.3em}
+menu a {color: #fff;display:inline-block; padding:0 0.8em 0.5em; border-bottom:0.2em solid #ddd}
+menu a:hover, .landing menu a.active {color:#ddd}
+menu li a span {font-size:1.8em}
+
+.go {position:absolute; left:50%; margin-left:-2.7em; bottom:5%; width:5.5em; height:5.5em; overflow:hidden; text-indent:-99.9em; background:url('gfx/go.svg') no-repeat 50% 100%; background-size:100%}
+.go:hover {background-position:50% 0%;background: #fff;}
+
+.doodle {display:none; position:absolute; right:0; bottom:0; width:30em; height:19em; background-image:url(gfx/doodle.png); background-size:auto; background-repeat:no-repeat; background-position:50% 50%}
+
+/*main*/
+main {position:relative; opacity:0}
+main.visible {opacity:1}
+
+/*welcome*/
+#about {padding:12em 0 16.7em}
+#about .me {display:inline-block; margin-bottom:5.3em; width:20em; height:20em; background-image:url(gfx/me1.jpg); background-position:0 0; background-repeat:no-repeat}
+
+#about p {line-height:4.2em; max-width:70%; margin:auto}
+#about p + p {margin-top:3.6em}
+
+/*specs*/
+.specs {margin-bottom:17.5em}
+.specs ul {text-align:left; padding:0 2.7em}
+.specs li {float:left; width:28%; margin-left:7%;height: 100px;}
+.specs li:nth-child(n+4) {margin-top:5.6em}
+.specs li:nth-child(3n+1) {margin-left:0}
+.specs p {line-height:2.6em; color:#68666f}
+.specs p .text {font-size:1.6em}
+
+/*work*/
+#work {margin-bottom:15.1em}
+#work h2 {margin-bottom:6.1em}
+#work .listWork {max-width:95%; margin:0 auto 12.2em auto; overflow:hidden}
+#work .listWork li {float:left; width:33.33%; position:relative; overflow:hidden }
+#work .listWork li img {min-width:100%}
+#work .listWork li img.response {display:none}
+#work .listWork li a {display:block; position:relative}
+#work .listWork li .img {display:block; position:absolute; top:0; left:0; right:0; bottom:0; background-repeat:no-repeat; background-position:50% 50%; background-size:cover; transition:all 0.3s}
+#work .listWork li:hover .img {-webkit-transform: scale(1.1); -moz-transform: scale(1.1); -o-transform: scale(1.1)}
+#work .listWork li:nth-child(n+4) {width:16.66%}
+#work .listWork li .bg {display:block; position:absolute; top:0; left:0; right:0; bottom:0; opacity:0; color:#f2f2f2; transition:all 0.3s}
+#work .listWork li:hover .bg {opacity:1}
+#work .listWork li .bg span {display:inline-block; font-weight:600; font-size:3em; vertical-align:middle; margin: 0 0 0 -0.08em}
+#work .listWork li .bg::before {content:""; display:inline-block; height:100%; vertical-align:middle}
+#work .clients li {float:left; width:25%; height:9em; line-height:9em}
+#work .clients li:nth-child(n+5) {margin-top:9em}
+
+/*contacts*/
+#contacts {margin-bottom:15em}
+#contacts h2 {margin-bottom:3.5em; cursor:pointer}
+#contacts h2 a{display:inline-block; padding-top:7em}
+#contacts .icoLinkedin {content:""; display:block; position:absolute; top:2em; left:50%; margin-left:-1.7em; width:3.4em; height:3.4em; background-image:url(gfx/linkedin.png); background-position:0 0}
+#contacts h2 a:hover .icoLinkedin {background-position:0 100%}
+#contacts p {line-height:4.2em; max-width:49%; margin:auto}
+#contacts p + p {margin-top:2.4em}
+#contacts .mail {font-weight:600; color:#4977d4}
+#contacts .mail .text {font-size:1.9em}
+
+/*footer*/
+footer {height:43.5em; width:100%; padding-top:14.8em; background-image:url(gfx/footer-bg.jpg); background-repeat:no-repeat; background-position:50% 50%; background-size:auto}
+footer .button {display:inline-block; padding:1em 2.2em; cursor:pointer}
+footer .button .text {display:inline-block; padding:0.25em 0.37em; border-bottom:2px solid #90acdb; font-size:1.8em; font-weight:500; color:#f0f0f1; text-transform:uppercase}
+footer .button:hover .text {border-bottom:2px solid #c0cded}
+footer .gif {position:fixed; background:url(gfx/austin.gif); background-size:cover; background-repeat:no-repeat; z-index:999; background-position:center}
+footer .gif.hidden {left:50%; top:50%; right:50%; bottom:50%;}
+footer .gif.active {left:0; top:0; right:0; bottom:0; cursor:pointer}
+
+/*screen*/
+@media screen and (max-width:1366px) {
+	.text {font-size:2.1em}
+	
+	.border {padding-top:1.7em}
+	.border::before {width:5.6em; height:0.3em; top:-0.5em; margin-left:-2.8em}
+
+	.wrapper {max-width:120em}
+
+	h1 {line-height:9.3em}
+	h1 .text {font-size:6.5em}
+	h2 {margin-bottom:6.9em}
+	h2 .text {font-size:6.8em}
+	h3 {margin-bottom:1.3em}
+	h3 .text {font-size:2.8em}
+
+	.landing h1 {left:7em; top:20%; width:66%}
+	.landing h1 strong {width:8.1em; height:9.6em; left:-9.4em; line-height:8.1em}
+	.landing h1 strong .text {font-size:3.4em}
+	.landing menu {bottom:20.8%}
+	.landing menu a {padding:0 0.8em 0.3em}
+	.landing menu li a span {font-size:1.7em}
+	.landing .go {margin-left:-1.95em; bottom:4.5%; width:3.9em; height:3.9em; }
+	.landing .doodle {width:21em; height:13.3em; background-size:contain}
+
+	#about {padding:7em 0 17em}
+	#about .me {margin-bottom:4.7em}
+	#about p {line-height:3.6em; max-width:59%; margin:auto}
+	#about p + p {margin-top:3.1em}
+
+	.specs {margin-bottom:17.5em}
+	.specs ul {padding:0 3.3em}
+	.specs li {width:29%; margin-left:6.5%}
+	.specs li:nth-child(n+4) {margin-top:5.5em}
+
+	#work {margin-bottom:15em}
+	#work h2 {margin-bottom:3.2em}
+	#work .listWork {margin:0 auto 11.9em auto}
+	#work .listWork li .bg span {font-size:2.2em}
+
+	#contacts {margin-bottom:11em}
+	#contacts h2 {margin-bottom:2.5em}
+	#contacts .icoLinkedin {top:2.2em}
+	#contacts p {line-height:3.6em; max-width:43%}
+	#contacts p + p {margin-top:2.9em}
+	#contacts .mail {font-weight:600; color:#4977d4}
+	#contacts .mail .text {font-size:1.8em}
+
+	footer .button .text {padding:0.22em 0.37em; font-size:1.7em}
+}
+
+@media screen and (max-width:1211px) {
+	h1 {line-height:9.1em}
+	h1 .text {font-size:7.2em}
+	h2 {margin-bottom:6.1em}
+	h2 .text {font-size:6em}
+	h3 {margin-bottom:1.3em; color:#000}
+	h3 .text {font-size:3em}
+
+	.landing h1 {left:13.7%; top:21.3%; width:75%}
+	.landing h1 strong {width:7.5em; height:8.8em; left:-8.8em; top:-4.9em; line-height:7.2em}
+	.landing h1 strong .text {font-size:3em}
+	.landing menu {bottom:18.4%}
+	.landing menu a {padding:0 0.5em 0.3em}
+	.landing .go {bottom:3.7%}
+	.landing .doodle {display:none}
+	
+	#about {padding:7em 0 14.2em}
+	#about .me {margin-bottom:4.6em}
+	#about p {max-width:69%}
+	#about p + p {margin-top:2.5em}
+
+	.specs {margin-bottom:12em}
+	.specs ul {padding:0 6em}
+	.specs li {width:28.8%; margin-left:6.8%}
+	.specs li:nth-child(n+4) {margin-top:4.8em}
+
+	#work {margin-bottom:13.4em}
+	#work h2 {margin-bottom:3.3em}
+	#work .listWork {margin:0 auto 9.3em auto}
+	#work .listWork li {float:left; width:50%}
+	#work .listWork li:nth-child(n+4) {width:50%}
+	#work .listWork li img {display:none}
+	#work .listWork li img.response {display:block; min-width:100%}
+	#work .listWork li:nth-child(4) a {background-image:url(static/work/mindbank_rec.jpg)!important}
+	#work .listWork li:nth-child(5) a {background-image:url(static/work/fluentbooks_rec.jpg)!important}
+	#work .listWork li:nth-child(6) a {background-image:url(static/work/skanderborg_rec.jpg)!important}
+	#work .listWork li:nth-child(7) a {background-image:url(static/work/sharkpro_rec.jpg)!important}
+	#work .listWork li:nth-child(8) a {background-image:url(static/work/lrs_rec.jpg)!important}
+	#work .clients li {height:7.7em; line-height:7.7em}
+	#work .clients li:nth-child(n+5) {margin-top:7.7em}
+	
+	#contacts {margin-bottom:10.6em}
+	#contacts h2 .text {font-size:6.8em}
+	#contacts p {max-width:49%}
+	#contacts p + p {margin-top:3em}
+	#contacts .mail .text {font-size:1.8em}
+}
+
+@media screen and (max-width:1012px) {
+	h1 {line-height:9.6em}
+	h1 .text {font-size:7.6em}
+	h2 {margin-bottom:5.9em}
+
+	.border {padding-top:1.5em}
+
+	.landing h1 {left:24.6%; top:13%; width:68%}
+	.landing h1 > .text .words {min-width:54%; white-space:normal}
+	.landing h1 strong {width:8.1em; height:9.5em; left:-9.5em; top:-5.4em; line-height:8em}
+	.landing h1 strong .text {font-size:3.4em}
+	.landing menu {bottom:16.7%}
+	.landing .go {bottom:4.5%}
+
+	#about {padding:7em 0 14.5em}
+	#about .me {margin-bottom:4.9em}
+	#about p {max-width:74%}
+	#about p + p {margin-top:3.1em}
+
+	.specs {margin-bottom:14.6em}
+	.specs ul {padding:0 8em}
+	.specs li {width:45.5%; margin-left:0}
+	.specs li:nth-child(n+4) {margin-top:0}
+	.specs li:nth-child(n+3) {margin-top:4.6em}
+	.specs li:nth-child(even) {margin-left:9%}
+
+	#work {margin-bottom:13.1em}
+	#work h2 {margin-bottom:4.4em}
+	#work .listWork {max-width:94%; margin:0 auto 8em auto}
+	#work .clients {padding:0 2%}
+	#work .clients li {width:33.33%; height:auto;}
+	#work .clients li img {width:64%}
+	#work .clients li:nth-child(n+4) {margin-top:7.9em}
+
+	#contacts {margin-bottom:10.5em}
+	#contacts p {max-width:68%}
+	#contacts p + p {margin-top:2.9em}
+	
+	footer {padding-top:15em}
+}
+
+@media screen and (max-width:640px) {
+	h1 {line-height:4.5em}
+	h1 .text {font-size:3.6em}
+	h2 {margin-bottom:3.3em}
+	h2 .text {font-size:3em}
+	h3 {margin-bottom:0.7em}
+	h3 .text {font-size:2.1em}
+
+	.text {font-size:1.8em}
+
+	.border {padding-top:0.7em}
+	.border::before {width:4.6em; height:0.3em; left:50%; margin-left:-2.3em}
+
+	.wrapper {position:relative; max-width:91%; margin:0 auto}
+
+	.landing .wrapper {max-width:100%}
+	.landing h1 {left:20.6%; top:11.5%; min-width:69%}
+	.landing h1 > .text .words {min-width:63%}
+	.landing h1 strong {width:4.4em; height:5.2em; left:-5.3em; top:-3.5em; line-height:4.4em}
+	.landing h1 strong .text {font-size:1.6em}
+	.landing menu {left:0; right:0; bottom:10em}
+	.landing menu li {padding:0 0.85em}
+	.landing menu a {padding:0 0.8em 0.3em}
+	.landing menu li a span {font-size:1.4em}
+
+	#about {padding:7.5em 0 8.3em}
+	#about .me {margin-bottom:2.4em}
+	#about p {line-height:3em; max-width:93%; margin:auto}
+	#about p + p {margin-top:2.6em}
+
+	.specs {margin-bottom:8.8em}
+	.specs ul {padding:0; margin:0}
+	.specs li {float:none; display:inline-block; width:100%; margin-left:0; margin-top:2.9em}
+	.specs li:nth-child(n+3) {margin-top:2.9em}
+	.specs li:first-child{margin-top:0}
+	.specs li:nth-child(even){margin-left:0}
+	.specs p {line-height:2.3em}
+	.specs p .text {font-size:1.4em}
+
+	#work {margin-bottom:3.9em}
+	#work h2 {margin-bottom:2.2em}
+	#work .listWork {max-width:91%; margin:0 auto 4em auto}
+	#work .listWork li, #work .listWork li:nth-child(n+4) {float:none; width:100%}
+	#work .listWork li .bg span {font-size:2em}
+	#work .clients {padding:0}
+	#work .clients li {float:left; width:48%; line-height:6em; margin:0; text-align:center}
+	#work .clients li img {width:11.9em; height:6em}
+	#work .clients li:nth-child(even) {margin-left:2%}
+	#work .clients li:nth-child(n+3) {margin-top:2.8em}
+	#work .clients li:nth-child(3) img{margin-left:-2.3em}
+
+	#contacts {margin-bottom:6.6em}
+	#contacts h2 {margin-bottom:2em}
+	#contacts h2 .text {font-size:3em}
+	#contacts p {line-height:3.2em; max-width:100%}
+	#contacts p + p {margin-top:1.7em}
+	#contacts .mail .text {font-size:1.6em}
+
+	footer {height:40.1em; width:100%; padding-top:10.9em}
+	footer .button {display:inline-block; padding:1em 2.2em; cursor:pointer}
+	footer .button .text {padding:0.23em 0.37em; border-bottom:2px solid #90acdb; font-size:1.3em}
+}
+
+@media screen and (min-width:414px) and (max-width:640px) {
+	h1 {line-height:5.8em}
+	h1 .text {font-size:4.6em}
+
+	.landing h1 {left:21.6%; top:14%}
+	.landing h1 strong {width:5.7em; height:6.6em; left:-6.8em; top:-4.5em; line-height:5.4em}
+	.landing h1 strong .text {font-size:2em}
+	.landing menu {bottom:11.6em}
+	.landing .go {bottom:3.7%}
+}
+
+@media screen and (min-width:375px) and (max-width:413px) {
+	h1 {line-height:5.2em}
+	h1 .text {font-size:4.2em}
+	
+	.landing h1 {left:21.6%; top:12.5%}
+	.landing h1 strong {width:5.1em; height:5.9em; left:-6.2em; top:-3.9em; line-height:4.8em}
+	.landing h1 strong .text {font-size:1.8em}
+	.landing menu {bottom:11em}
+	.landing .go {bottom:3%}
+}
