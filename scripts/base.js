@@ -18,9 +18,19 @@ Page.DOM = function () {
     //dynamic elements events
 }
 
+function dateDiffYearsOnly( dateNew,dateOld) {
+   function date2ymd(d){ w=new Date(d);return [w.getFullYear(),w.getMonth(),w.getDate()]}
+   function ymd2N(y){return (((y[0]<<4)+y[1])<<5)+y[2]} // or 60 and 60 // or 13 and 32 // or 25 and 40 //// with ...
+   function date2N(d){ return ymd2N(date2ymd(d))}
+
+   return  (date2N(dateNew)-date2N(dateOld))>>9
+}
+
 //DOM load
 Page.DOMLoad = function () {
     //todo
+	var joiningDate = new Date('2016, 05, 30');
+	$('yearsOfExp').innerHTML = "" + dateDiffYearsOnly(new Date(), joiningDate) + "+";
 }
 
 //DOM change
