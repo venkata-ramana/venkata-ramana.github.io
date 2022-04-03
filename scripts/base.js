@@ -30,7 +30,7 @@ function dateDiffYearsOnly( dateNew,dateOld) {
 Page.DOMLoad = function () {
     //todo
 	var joiningDate = new Date('2016, 05, 30');
-	$('#yearsOfExp').innerHTML = "" + dateDiffYearsOnly(new Date(), joiningDate) + "+";
+	$('#yearsOfExp').html("" + dateDiffYearsOnly(new Date(), joiningDate) + "+");
 }
 
 //DOM change
